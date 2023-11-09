@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://funsocial-a5e2cfc4eaab.herokuapp.com",
   })
 );
 app.use(cookieParser());
@@ -46,6 +46,7 @@ app.use("/api/comments", commentRoutes);
 app.use("/api/likes", likeRoutes);
 app.use("/api/relationships", relationshipRoutes);
 
-app.listen(process.env.PORT || 8800, () => {
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, () => {
   console.log("API working!");
 });
