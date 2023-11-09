@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://funsocial-a5e2cfc4eaab.herokuapp.com",
+    origin: "https://lambent-stroopwafel-3d4f29.netlify.app/",
   })
 );
 app.use(cookieParser());
